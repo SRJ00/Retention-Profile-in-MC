@@ -17,17 +17,6 @@ publishable/
     requirements.txt
 ```
 
-## Building the PDF
-
-```
-pdflatex main.tex
-pdflatex main.tex
-```
-
-The bibliography is inlined via `\begin{thebibliography}`; no BibTeX run is
-required. `refs.bib` is shipped as a companion artifact for downstream
-journal submissions or third-party citation.
-
 ## Reproducing the numerics
 
 From the `reproducibility/` directory:
