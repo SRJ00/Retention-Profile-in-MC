@@ -7,7 +7,6 @@ package.
 
 ```
 publishable/
-  main.tex          # manuscript (inline bibliography; one-shot pdflatex)
   refs.bib          # parallel BibTeX artifact (not used by main.tex)
   README.md         # this file
   reproducibility/
