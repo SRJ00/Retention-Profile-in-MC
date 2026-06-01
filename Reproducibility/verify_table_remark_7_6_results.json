@@ -1,6 +1,6 @@
 {
   "seed": 20260511,
-  "elapsed_sec": 1523.8044006824493,
+  "elapsed_sec": 4116.225804805756,
   "overall_pass": true,
   "rows": [
     {
@@ -30,18 +30,26 @@
           "eta": 0.20751874963942185,
           "eta_over_M": 1.0,
           "witness": "delta_0-direct",
+          "stationary_residual": 0.0,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "K_8",
-          "rho": 1.0,
-          "M": 0.06421502598079859,
-          "eta": 0.06421502598079859,
+          "rho": 0.9999999999999996,
+          "M": 0.06421502598079862,
+          "eta": 0.06421502598079862,
           "eta_over_M": 1.0,
-          "witness": "delta_0-direct",
+          "witness": "delta_1-direct",
+          "stationary_residual": 2.7755575615628914e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "K_12",
@@ -50,8 +58,12 @@
           "eta": 0.0350159540186564,
           "eta_over_M": 1.0,
           "witness": "delta_1-direct",
+          "stationary_residual": 2.7755575615628914e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "K_16",
@@ -60,8 +72,12 @@
           "eta": 0.023277351097870377,
           "eta_over_M": 1.0,
           "witness": "delta_0-direct",
+          "stationary_residual": 2.7755575615628914e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "K_20",
@@ -70,8 +86,12 @@
           "eta": 0.01712212230724444,
           "eta_over_M": 1.000000000000004,
           "witness": "delta_1-direct",
+          "stationary_residual": 6.938893903907228e-18,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -82,8 +102,8 @@
         0.5
       ],
       "observed_rho": [
-        0.4999999999999998,
-        0.5000000000000001
+        0.5,
+        0.5000000000000002
       ],
       "expected_ratio": [
         1.0,
@@ -102,28 +122,40 @@
           "eta": 0.33333333333333337,
           "eta_over_M": 1.0,
           "witness": "delta_1-direct",
+          "stationary_residual": 0.0,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "S_10",
-          "rho": 0.4999999999999998,
-          "M": 0.3800937667159343,
-          "eta": 0.3800937667159343,
+          "rho": 0.5000000000000001,
+          "M": 0.3800937667159344,
+          "eta": 0.3800937667159344,
           "eta_over_M": 1.0,
           "witness": "delta_2-direct",
+          "stationary_residual": 1.6653345369377348e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "S_20",
-          "rho": 0.5000000000000001,
-          "M": 0.4047242937866134,
-          "eta": 0.4047242937866134,
+          "rho": 0.5000000000000002,
+          "M": 0.4047242937866133,
+          "eta": 0.4047242937866133,
           "eta_over_M": 1.0,
           "witness": "delta_1-direct",
+          "stationary_residual": 5.551115123125783e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "S_35",
@@ -132,18 +164,26 @@
           "eta": 0.41786397501897493,
           "eta_over_M": 1.0,
           "witness": "delta_2-direct",
+          "stationary_residual": 8.673617379884035e-18,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "S_50",
-          "rho": 0.49999999999999994,
+          "rho": 0.5000000000000001,
           "M": 0.4244108945391118,
           "eta": 0.4244108945391118,
           "eta_over_M": 1.0,
           "witness": "delta_1-direct",
+          "stationary_residual": 2.220446049250313e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -154,58 +194,74 @@
         0.27
       ],
       "observed_rho": [
-        0.23879448287297647,
-        0.26692062287554535
+        0.24356868676823173,
+        0.26692062287775525
       ],
       "expected_ratio": [
         1.01,
         1.04
       ],
       "observed_ratio": [
-        1.007732308004068,
-        1.0378095661624005
+        1.0111109617537177,
+        1.037809563660703
       ],
       "verdict": "PASS",
       "instances": [
         {
           "label": "BD_10_l0.85",
-          "rho": 0.26692062287554535,
-          "M": 0.8922016373271139,
-          "eta": 0.9259353941638354,
-          "eta_over_M": 1.0378095661624005,
-          "witness": "dir_30-polish",
+          "rho": 0.26692062287775525,
+          "M": 0.8922016373197562,
+          "eta": 0.9259353919241811,
+          "eta_over_M": 1.037809563660703,
+          "witness": "dir_74-polish",
+          "stationary_residual": 1.1102230246251565e-16,
+          "pi_source": "closed-form-biased-bd",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "BD_20_l0.85",
-          "rho": 0.2499728459632305,
-          "M": 0.9526930739802683,
-          "eta": 0.9727512110587716,
-          "eta_over_M": 1.0210541439067067,
-          "witness": "sm_rand_20",
+          "rho": 0.24996000133059085,
+          "M": 0.9527420297832093,
+          "eta": 0.9727965214938296,
+          "eta_over_M": 1.0210492358725725,
+          "witness": "dir_92-polish",
+          "stationary_residual": 3.469446951953614e-17,
+          "pi_source": "closed-form-biased-bd",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "BD_30_l0.85",
-          "rho": 0.24087212979910808,
-          "M": 0.9886880613001053,
-          "eta": 1.0051832567402887,
-          "eta_over_M": 1.0166839229539117,
-          "witness": "dir_43-polish",
+          "rho": 0.24557921110049585,
+          "M": 0.9697376173053919,
+          "eta": 0.9838348148530419,
+          "eta_over_M": 1.014537125606019,
+          "witness": "struct_8-polish",
+          "stationary_residual": 4.440892098500626e-16,
+          "pi_source": "closed-form-biased-bd",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "BD_40_l0.85",
-          "rho": 0.23879448287297647,
-          "M": 0.9972902060686288,
-          "eta": 1.005001561111392,
-          "eta_over_M": 1.007732308004068,
-          "witness": "dir_16-polish",
+          "rho": 0.24356868676823173,
+          "M": 0.9777422631462562,
+          "eta": 0.9886059200370676,
+          "eta_over_M": 1.0111109617537177,
+          "witness": "struct_8-polish",
+          "stationary_residual": 5.273559366969494e-16,
+          "pi_source": "closed-form-biased-bd",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -224,8 +280,8 @@
         1.37
       ],
       "observed_ratio": [
-        1.2054013562222865,
-        1.3651277655761105
+        1.2052702252141079,
+        1.3651724230951094
       ],
       "verdict": "PASS",
       "instances": [
@@ -233,31 +289,43 @@
           "label": "2state_a0.1",
           "rho": 1.0,
           "M": 0.5310044064107188,
-          "eta": 0.6400734316474906,
-          "eta_over_M": 1.2054013562222865,
-          "witness": "sm_rand_58",
+          "eta": 0.6400038005043307,
+          "eta_over_M": 1.2052702252141079,
+          "witness": "dir_69-polish",
+          "stationary_residual": 0.0,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "2state_a0.2",
           "rho": 0.9999999999999998,
           "M": 0.27807190511263774,
-          "eta": 0.36000063742408356,
-          "eta_over_M": 1.2946314633197453,
-          "witness": "sm_rand_42",
+          "eta": 0.36000040744762524,
+          "eta_over_M": 1.2946306362802131,
+          "witness": "dir_50-polish",
+          "stationary_residual": 0.0,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "2state_a0.35",
           "rho": 1.0,
           "M": 0.065931944624509,
-          "eta": 0.09000552824534383,
-          "eta_over_M": 1.3651277655761105,
-          "witness": "dir_33-polish",
+          "eta": 0.09000847260241354,
+          "eta_over_M": 1.3651724230951094,
+          "witness": "sm_rand_10",
+          "stationary_residual": 0.0,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -268,7 +336,7 @@
         1.0
       ],
       "observed_rho": [
-        0.9999999999999997,
+        0.9999999999999996,
         1.0
       ],
       "expected_ratio": [
@@ -276,8 +344,8 @@
         1.13
       ],
       "observed_ratio": [
-        1.0000000000001241,
-        1.1271417838975561
+        1.0000000000003801,
+        1.1271409708740139
       ],
       "verdict": "PASS",
       "instances": [
@@ -285,61 +353,85 @@
           "label": "Q_2",
           "rho": 0.9999999999999998,
           "M": 0.25000000000000006,
-          "eta": 0.2500000000000311,
-          "eta_over_M": 1.0000000000001241,
-          "witness": "eig1_eps0.05-polish",
+          "eta": 0.2500000000000951,
+          "eta_over_M": 1.0000000000003801,
+          "witness": "eig3_eps0.05-polish",
+          "stationary_residual": 2.7755575615628914e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "Q_3",
-          "rho": 0.9999999999999999,
-          "M": 0.4025062498798073,
-          "eta": 0.44444433158113744,
-          "eta_over_M": 1.104192373941655,
-          "witness": "dir_109-polish",
+          "rho": 0.9999999999999996,
+          "M": 0.4025062498798075,
+          "eta": 0.4444442860180822,
+          "eta_over_M": 1.104192260743275,
+          "witness": "sm_rand_17",
+          "stationary_residual": 8.326672684688674e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "Q_4",
           "rho": 1.0,
           "M": 0.5,
-          "eta": 0.5624997413464882,
-          "eta_over_M": 1.1249994826929763,
-          "witness": "eig5_eps0.1-polish",
+          "eta": 0.5624993938184139,
+          "eta_over_M": 1.1249987876368277,
+          "witness": "dir_58-polish",
+          "stationary_residual": 3.469446951953614e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "Q_5",
-          "rho": 0.9999999999999998,
-          "M": 0.5678071905112639,
-          "eta": 0.6399992096227256,
-          "eta_over_M": 1.1271417838975561,
-          "witness": "sm_rand_37",
+          "rho": 0.9999999999999996,
+          "M": 0.567807190511264,
+          "eta": 0.6399987479821123,
+          "eta_over_M": 1.1271409708740139,
+          "witness": "dir_76-polish",
+          "stationary_residual": 3.8163916471489756e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "Q_6",
           "rho": 0.9999999999999997,
-          "M": 0.6179197916065705,
-          "eta": 0.6944428418865244,
-          "eta_over_M": 1.1238397787534795,
-          "witness": "dir_115-polish",
+          "M": 0.6179197916065706,
+          "eta": 0.6944423105986876,
+          "eta_over_M": 1.123838918952832,
+          "witness": "dir_74-polish",
+          "stationary_residual": 1.734723475976807e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "Q_7",
-          "rho": 1.0,
-          "M": 0.656617505567314,
-          "eta": 0.7346883131491032,
-          "eta_over_M": 1.118898455980604,
-          "witness": "dir_79-polish",
+          "rho": 0.9999999999999998,
+          "M": 0.6566175055673141,
+          "eta": 0.734688536153603,
+          "eta_over_M": 1.1188987956067906,
+          "witness": "dir_53-polish",
+          "stationary_residual": 1.0408340855860843e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -350,68 +442,88 @@
         1.0
       ],
       "observed_rho": [
-        0.9999999999999614,
-        0.9999999999999996
+        0.9999999999999757,
+        0.9999999999999993
       ],
       "expected_ratio": [
         1.35,
         1.49
       ],
       "observed_ratio": [
-        1.3512626629011801,
-        1.4917084876854505
+        1.3512626747516834,
+        1.4917085797552625
       ],
       "verdict": "PASS",
       "instances": [
         {
           "label": "C_10",
-          "rho": 0.9999999999999996,
-          "M": 0.5484550065040285,
-          "eta": 0.8181349883156382,
-          "eta_over_M": 1.4917084876854505,
-          "witness": "dir_56-polish",
+          "rho": 0.999999999999999,
+          "M": 0.5484550065040287,
+          "eta": 0.8181350388117878,
+          "eta_over_M": 1.4917085797552625,
+          "witness": "dir_100-polish",
+          "stationary_residual": 6.938893903907228e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "C_20",
-          "rho": 0.9999999999999933,
-          "M": 0.6529326802603657,
-          "eta": 0.9516545547266823,
-          "eta_over_M": 1.457507923094303,
-          "witness": "sm_rand_47",
+          "rho": 0.9999999999999972,
+          "M": 0.6529326802603631,
+          "eta": 0.9516548296968731,
+          "eta_over_M": 1.4575083442253063,
+          "witness": "dir_19-polish",
+          "stationary_residual": 9.71445146547012e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "C_30",
-          "rho": 0.9999999999999996,
-          "M": 0.6943074293642413,
-          "eta": 0.9782664601033549,
-          "eta_over_M": 1.4089816970547577,
-          "witness": "eig12_eps0.2-polish",
+          "rho": 0.9999999999999993,
+          "M": 0.6943074293642414,
+          "eta": 0.9782663141312016,
+          "eta_over_M": 1.4089814868133756,
+          "witness": "dir_4-polish",
+          "stationary_residual": 9.71445146547012e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "C_40",
-          "rho": 0.9999999999999614,
-          "M": 0.7181472629363665,
-          "eta": 0.9877259473852127,
-          "eta_over_M": 1.3753807865904697,
-          "witness": "dir_66-polish",
+          "rho": 0.9999999999999757,
+          "M": 0.7181472629363562,
+          "eta": 0.9877256688537687,
+          "eta_over_M": 1.3753803987432354,
+          "witness": "sm_rand_52",
+          "stationary_residual": 7.28583859910259e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "C_50",
-          "rho": 0.9999999999999803,
-          "M": 0.7342242697966775,
-          "eta": 0.9921298419721329,
-          "eta_over_M": 1.3512626629011801,
-          "witness": "dir_1-polish",
+          "rho": 0.99999999999998,
+          "M": 0.7342242697966778,
+          "eta": 0.9921298506730605,
+          "eta_over_M": 1.3512626747516834,
+          "witness": "sm_rand_21",
+          "stationary_residual": 7.28583859910259e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -430,8 +542,8 @@
         1.47
       ],
       "observed_ratio": [
-        1.283745665090048,
-        1.4690442013945417
+        1.2837456646000496,
+        1.4690441663005172
       ],
       "verdict": "PASS",
       "instances": [
@@ -439,51 +551,71 @@
           "label": "P_10",
           "rho": 0.869832128811514,
           "M": 0.6402813001478052,
-          "eta": 0.9406015312434913,
-          "eta_over_M": 1.4690442013945417,
-          "witness": "sm_rand_2",
+          "eta": 0.9406015087734436,
+          "eta_over_M": 1.4690441663005172,
+          "witness": "dir_26-polish",
+          "stationary_residual": 1.3877787807814457e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "P_20",
           "rho": 0.9194174129901262,
           "M": 0.714172881359848,
-          "eta": 0.9864075065684865,
-          "eta_over_M": 1.3811886901814023,
-          "witness": "dir_90-polish",
+          "eta": 0.9864073935194742,
+          "eta_over_M": 1.38118853188778,
+          "witness": "dir_97-polish",
+          "stationary_residual": 1.3877787807814457e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "P_30",
           "rho": 0.9363621510930533,
           "M": 0.7439390805044385,
-          "eta": 0.994146228123001,
-          "eta_over_M": 1.3363274684385529,
-          "witness": "dir_87-polish",
+          "eta": 0.9941461160889598,
+          "eta_over_M": 1.3363273178428332,
+          "witness": "dir_111-polish",
+          "stationary_residual": 1.3877787807814457e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "P_40",
           "rho": 0.9427416922205005,
           "M": 0.7634995506039631,
-          "eta": 0.9967594682959934,
-          "eta_over_M": 1.3055141519173272,
+          "eta": 0.9967595426147549,
+          "eta_over_M": 1.3055142492569543,
           "witness": "eig30_eps0.4-polish",
+          "stationary_residual": 1.5959455978986625e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "P_50",
           "rho": 0.9461205847924988,
           "M": 0.777370508057484,
-          "eta": 0.9979460198876433,
-          "eta_over_M": 1.283745665090048,
+          "eta": 0.9979460195067329,
+          "eta_over_M": 1.2837456646000496,
           "witness": "eig37_eps0.05-polish",
+          "stationary_residual": 1.5959455978986625e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     },
@@ -494,68 +626,88 @@
         0.99
       ],
       "observed_rho": [
-        0.9638957886877563,
-        0.9922984748167253
+        0.9638957886877534,
+        0.9922984748167205
       ],
       "expected_ratio": [
         2.33,
         2.44
       ],
       "observed_ratio": [
-        2.330122222125601,
-        2.4383236347582113
+        2.33012221628312,
+        2.438323633832718
       ],
       "verdict": "PASS",
       "instances": [
         {
           "label": "B_5",
-          "rho": 0.9638957886877563,
-          "M": 0.3985701343391167,
-          "eta": 0.9287171270991619,
-          "eta_over_M": 2.330122222125601,
+          "rho": 0.9638957886877534,
+          "M": 0.3985701343391181,
+          "eta": 0.9287171247705268,
+          "eta_over_M": 2.33012221628312,
           "witness": "struct_6-polish",
+          "stationary_residual": 1.8041124150158794e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "B_6",
-          "rho": 0.9777610031629699,
-          "M": 0.39782324479959597,
-          "eta": 0.949983325308249,
-          "eta_over_M": 2.387953287613459,
+          "rho": 0.9777610031629705,
+          "M": 0.3978232447995956,
+          "eta": 0.9499833230983753,
+          "eta_over_M": 2.3879532820585476,
           "witness": "struct_6-polish",
+          "stationary_residual": 1.6653345369377348e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "B_7",
-          "rho": 0.9851911533554328,
-          "M": 0.3983774773923166,
-          "eta": 0.9629166065409167,
-          "eta_over_M": 2.4170959986090024,
+          "rho": 0.9851911533554241,
+          "M": 0.3983774773923201,
+          "eta": 0.9629166029186651,
+          "eta_over_M": 2.41709598951647,
           "witness": "struct_6-polish",
+          "stationary_residual": 9.71445146547012e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "B_8",
-          "rho": 0.9895531790617448,
-          "M": 0.39947416469457503,
-          "eta": 0.9713833790203346,
-          "eta_over_M": 2.4316550727705324,
+          "rho": 0.9895531790617444,
+          "M": 0.39947416469457514,
+          "eta": 0.9713833822918567,
+          "eta_over_M": 2.431655080960103,
           "witness": "struct_6-polish",
+          "stationary_residual": 1.8041124150158794e-16,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         },
         {
           "label": "B_9",
-          "rho": 0.9922984748167253,
-          "M": 0.4007815178635438,
-          "eta": 0.9772350473809491,
-          "eta_over_M": 2.4383236347582113,
+          "rho": 0.9922984748167205,
+          "M": 0.40078151786354577,
+          "eta": 0.9772350470100332,
+          "eta_over_M": 2.438323633832718,
           "witness": "struct_6-polish",
+          "stationary_residual": 3.469446951953614e-17,
+          "pi_source": "eigenvector",
           "rho_ok": true,
-          "ratio_ok": true
+          "ratio_ok": true,
+          "stationary_ok": true,
+          "eta_cap_ok": true
         }
       ]
     }

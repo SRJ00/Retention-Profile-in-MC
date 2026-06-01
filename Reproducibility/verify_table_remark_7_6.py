@@ -45,6 +45,8 @@ RNG = np.random.default_rng(SEED)
 INT_TOL = 0.015          # for ratios printed to 2 decimals
 RHO_TOL_EXACT = 5e-4     # for rho values asserted to be exactly 1 or 1/2
 RHO_TOL_RANGE = 0.01     # for rho ranges (path, BD, barbell)
+STAT_TOL = 1e-8          # stationarity residual tolerance: max_x |(pi P-pi)(x)|
+ETA_CAP_TOL = 1e-8       # numerical tolerance for the data-processing cap eta_KL <= 1
 
 
 # ---------------------------------------------------------------------------
@@ -70,6 +72,10 @@ def stationary(P: np.ndarray) -> np.ndarray:
             break
         pi = pi_new
     return pi
+
+
+def stationary_residual(P: np.ndarray, pi: np.ndarray) -> float:
+    return float(np.max(np.abs(pi @ P - pi)))
 
 
 def retention(P: np.ndarray, pi: np.ndarray) -> np.ndarray:
@@ -288,6 +294,35 @@ def biased_bd(n: int, lam: float = 0.85) -> np.ndarray:
         P[x, x + 1] = lam / 2.0
         P[x, x - 1] = (1.0 - lam) / 2.0
     return P
+
+
+def biased_bd_stationary(n: int, lam: float = 0.85) -> np.ndarray:
+    """Closed-form stationary law for biased_bd, computed in log scale.
+
+    For lam=0.85 and n=30,40 this law is extremely skewed. Generic
+    eigenvector extraction can lose the smallest masses, which then corrupts
+    KL ratios enough to violate the data-processing cap eta_KL <= 1. The
+    manuscript states this closed form, so the verifier uses it directly for
+    this family.
+    """
+    q = lam / (1.0 - lam)
+    logs = np.zeros(n)
+    if n > 2:
+        logs[1:n - 1] = np.log(2.0) + np.arange(1, n - 1) * np.log(q)
+    logs[n - 1] = (n - 1) * np.log(q)
+    logs -= np.max(logs)
+    weights = np.exp(logs)
+    return weights / weights.sum()
+
+
+def stationary_for_instance(label: str, P: np.ndarray) -> Tuple[np.ndarray, str]:
+    if label.startswith("BD_") and "_l" in label:
+        try:
+            lam = float(label.rsplit("_l", 1)[1])
+        except ValueError:
+            lam = 0.85
+        return biased_bd_stationary(P.shape[0], lam), "closed-form-biased-bd"
+    return stationary(P), "eigenvector"
 
 
 def two_state_symmetric(a: float) -> np.ndarray:
@@ -514,7 +549,8 @@ def main():
         all_pass = True
 
         for label, P, cands in row.instances:
-            pi = stationary(P)
+            pi, pi_source = stationary_for_instance(label, P)
+            stat_resid = stationary_residual(P, pi)
             rho, M, _r = rho_M(P, pi)
             eta, witness = eta_kl(P, pi, extra_candidates=cands,
                                   n_dirichlet=row.n_dirichlet)
@@ -524,7 +560,9 @@ def main():
             ratio_ok = (np.isnan(r_over_M)
                         or in_interval(r_over_M, row.ratio_expected[0],
                                        row.ratio_expected[1], row.ratio_tol))
-            inst_pass = rho_ok and ratio_ok
+            stat_ok = stat_resid <= STAT_TOL
+            eta_cap_ok = eta <= 1.0 + ETA_CAP_TOL
+            inst_pass = rho_ok and ratio_ok and stat_ok and eta_cap_ok
             all_pass = all_pass and inst_pass
 
             row_rho_min = min(row_rho_min, rho)
@@ -534,11 +572,17 @@ def main():
 
             flag = "OK " if inst_pass else "BAD"
             print(f"  [{flag}] {label:14s}  rho={rho:.4f}  M={M:.4e}  "
-                  f"eta>={eta:.4f}  eta/M={r_over_M:.4f}  witness={witness}")
+                  f"eta>={eta:.4f}  eta/M={r_over_M:.4f}  "
+                  f"stat={stat_resid:.1e}  pi={pi_source}  witness={witness}")
             per_inst.append({
                 "label": label, "rho": rho, "M": M, "eta": eta,
                 "eta_over_M": r_over_M, "witness": witness,
-                "rho_ok": rho_ok, "ratio_ok": ratio_ok,
+                "stationary_residual": stat_resid,
+                "pi_source": pi_source,
+                "rho_ok": rho_ok,
+                "ratio_ok": ratio_ok,
+                "stationary_ok": stat_ok,
+                "eta_cap_ok": eta_cap_ok,
             })
 
         verdict = "PASS" if all_pass else "FAIL"
