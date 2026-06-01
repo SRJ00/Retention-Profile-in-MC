@@ -1,6 +1,6 @@
 """
-Per-row verification of the numerical table in Remark 7.6 of
-"Row-Based KL Contraction and Localization in Finite Markov Chains" (v2).
+Per-row verification of the numerical table in the manuscript
+"Retention Profiles and KL Contraction in Finite Markov Chains".
 
 For every chain family in the table we:
   (i)   build the kernel exactly as specified in the manuscript,
@@ -9,8 +9,8 @@ For every chain family in the table we:
   (iv)  estimate eta_KL(P) by maximizing F(mu) = KL(muP||pi)/KL(mu||pi) over
         an aggressive candidate pool:
             - every point mass delta_x  (boundary candidates),
-            - the local-quadratic candidate mu_pi + eps * pi * phi_2 from
-              Proposition 5.x (eigenfunction-perturbation candidate),
+            - local-quadratic candidates mu_pi + eps * pi * phi from the
+              near-stationary lower-bound proposition,
             - family-specific structured candidates (cycle arcs, hypercube
               faces, barbell clique mixtures, path arcs),
             - Dirichlet random restarts, and
@@ -298,14 +298,10 @@ def hypercube(d: int) -> np.ndarray:
     """Standard lazy random walk on Q_d = {0,1}^d:
        P(x,x) = 1/2, and for each of the d neighbours y (Hamming distance 1):
        P(x,y) = 1/(2d).
-    NOTE: This is NOT the tensor product of the K_2-base [[1/2,1/2],[1/2,1/2]]
-    (which has every row equal to pi and hence M=0). The manuscript's
-    Remark 7.6 row for Q_d quotes a non-trivial eta/M range (1.00-1.13),
-    which corresponds to this standard "stay-or-flip-uniform-coordinate"
-    construction. The tensor-product remark and the table row are therefore
-    referring to different chains; this is an inconsistency in the
-    manuscript.  We use the construction that the *table* implicitly
-    assumes."""
+    NOTE: This is not the tensor product of the K_2-base
+    [[1/2, 1/2], [1/2, 1/2]], which has every row equal to pi and hence M=0.
+    This is the standard "stay-or-flip-a-uniform-coordinate" construction
+    described in the manuscript's hypercube remark."""
     n = 1 << d
     P = np.zeros((n, n))
     for x in range(n):
