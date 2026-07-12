@@ -38,20 +38,24 @@ Python 3.10 or later is recommended.
 
 The figure generator writes a vector PDF to
 **figures/singleton-retention-profiles.pdf**. The validator uses only the
-Python standard library and checks:
+Python standard library and performs the following transcription and
+regression checks:
 
-- positivity, row normalization, stationarity, and detailed balance of the
+- strict positivity, row normalization, stationarity, detailed balance, and
+  agreement with the displayed block formulas for a representative finite
   multiplicity construction;
-- agreement of the matrix calculation with the displayed block-divergence
-  formulas;
-- the order and inequalities used in the diagonal choice of N_m and
-  delta_m;
-- the supplementary three-state spectra and profiles;
-- the symmetric binary comparison; and
-- the uniform set-bottleneck simplification.
+- a numerical realization of the diagonal parameter choices and their stated
+  inequalities for m=3,...,15;
+- the stated eigenpairs and singleton-profile values in the supplementary
+  three-state example;
+- the strict symmetric-binary comparison on the finite grid
+  a=0.001,...,0.499; and
+- the uniform set-bottleneck simplification on the finite grid
+  p=0.005,...,0.5 and h=0.01,...,0.99.
 
-The script is a transcription check; the proofs in the manuscript remain
-the mathematical justification.
+These automated checks help detect transcription and implementation errors;
+the analytic proofs in the manuscript establish the general and asymptotic
+statements.
 
 ## Build the manuscript
 
