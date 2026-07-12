@@ -218,9 +218,9 @@ we restrict attention to the discrete-time, fixed-reference problem.
 
 \paragraph{Point inputs and stationary row divergence.}
 Point masses are standard feasible tests for a fixed-reference SDPI; their
-use is not new.  For the nonlazy complete-graph walk,
-Gu--Polyanskiy's one-parameter reduction and strictness argument
-\cite[equation~(30) and the proof of Proposition~33]{GuPolyanskiy2023}
+use is not new.  For the nonlazy complete-graph walk on \(K_n\), \(n\ge3\),
+the fixed-entropy reduction and strict endpoint argument of
+Gu--Polyanskiy~\cite[Proposition~18 and Section~5.2]{GuPolyanskiy2023}
 show that point masses are in fact the only extremizers.  Choi--Hird--Wang
 \cite{ChoiHirdWang2025} use
 \[
@@ -1119,17 +1119,20 @@ determine mixing speed; it describes where the singleton obstruction lives.
 
 For the nonlazy simple random walk on \(K_n\), \(n\ge3\),
 \[
-  \Mone=\frac{\log n-\log(n-1)}{\log n},
-  \qquad \Lone=1.
+  \Mone
+  =
+  \frac{\log n-\log(n-1)}{\log n},
+  \qquad
+  \Lone=1.
 \]
-In this example the lower bound is exact:
+In this example, the singleton lower bound is exact:
 \[
   \etaStat=\Mone,
 \]
-and point masses are the only extremizers
-\cite[equation~(30) and the proof of Proposition~33]{GuPolyanskiy2023}.
-This is a useful benchmark precisely
-because it is analytic; no optimizer output is needed.
+and point masses are the only extremizers; see
+Gu--Polyanskiy~\cite[Proposition~18 and Section~5.2]{GuPolyanskiy2023}.
+This provides an analytic benchmark for which no numerical optimization
+is required.
 
 \subsection{The lazy star}
 
@@ -1230,14 +1233,14 @@ proxy for the global coefficient.
   \caption{Decreasing rearrangements of the normalized singleton values
   \(r(x)/\Mone\), plotted against cumulative stationary mass.  These are
   profile plots rather than plots of the survival function \(F_1\); the area
-  under each profile is \(\Lone\).  The lazy cycle is homogeneous
+  under each profile equals \(\Lone\).  The lazy cycle is homogeneous
   (\(\Lone=1\)), while the lazy star has a two-level profile
-  (\(\Lone=1/2\)).  The third panel
-  uses the finite multiplicity construction with
+  (\(\Lone=1/2\)).  The third panel uses the finite multiplicity construction
+  with
   \(\varepsilon=0.08\), \(k=256\), \(N=300\), and \(\delta=0.005\):
-  \(\Lone=0.122\) but the set witness has \(R(A)=0.983\).
-  The small singleton area therefore coexists with almost complete
-  collective retention.}
+  \(\Lone=0.122\), while the set-conditioned witness satisfies
+  \(R(A)=0.983\).  Thus a small singleton area can coexist with almost
+  complete collective retention.}
   \label{fig:profiles}
 \end{figure}
 
@@ -1458,14 +1461,17 @@ The author declares no competing interests.
 
 \paragraph{Data and code availability.}
 The figure is generated deterministically by the script
-\path{scripts/generate_retention_profile_figure.py}; it uses only the
-closed-form expressions displayed in the paper.  The companion script
-\path{scripts/validate_retention_claims.py} independently checks the finite
-counterexample matrix, the diagonal construction, the three-state spectra
-and profiles, the binary comparison, and the simplified bottleneck
-inequality.  No empirical dataset is used.  Both scripts are included in
-the submission source archive.  The manuscript makes no optimizer-based
-claims.
+\path{scripts/generate_retention_profile_figure.py} from the closed-form
+expressions displayed in the paper.  The companion script
+\path{scripts/validate_retention_claims.py} checks a representative finite
+counterexample matrix and its block formulas, numerically realizes the
+diagonal parameter choices for \(m=3,\ldots,15\), verifies the stated
+three-state eigenpairs and profile values, and samples the binary comparison
+and uniform bottleneck simplification on finite grids.  These automated
+checks are transcription and regression checks; they supplement, but do not
+replace, the analytic proofs.  No empirical dataset is used.  Both scripts
+are included in the submission source archive.  The manuscript makes no
+optimizer-based claims.
 
 
 \begin{thebibliography}{99}
