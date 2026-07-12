@@ -1,4 +1,0 @@
-# Pinned to the environment reported in the manuscript.
-# Python 3.12.13
-numpy==2.3.5
-scipy>=1.13

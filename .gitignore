@@ -1,0 +1,15 @@
+.env
+.venv-openai-review/
+review_output.md
+openai-api-key.txt
+__pycache__/
+tmp/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+/main-revised-adv.pdf
+submission/_build/
+submission/_build*/
+submission/source-stage*/

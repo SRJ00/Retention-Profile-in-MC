@@ -1,39 +1,72 @@
-# Retention Profiles and KL Contraction in Finite Markov Chains
+# Singleton and set retention in finite Markov chains
 
-This bundle contains the SSRN-ready manuscript and a minimal reproducibility
-package.
+This repository contains the submission source for:
 
-## Contents
+> **From Singleton to Set Retention in KL Contraction of Finite Markov Chains**
 
-```
-publishable/
-  refs.bib          # parallel BibTeX artifact (not used by main.tex)
-  README.md         # this file
-  reproducibility/
-    kl_contraction_audit.py            # master audit script
-    simulate_rho_spectral_cheeger.py   # generates correlations cited in §7
-    verify_table_remark_7_6.py         # driver for Table in Remark 7.6
-    verify_table_remark_7_6_results.json   # cached numerical outputs
-    requirements.txt
-```
+The authoritative manuscript is **main-revised-adv.tex**. Earlier development
+versions and review artifacts are not part of this repository or the
+submission package.
 
-## Reproducing the numerics
+The previous optimizer-based table and correlation study has been removed.
+The current manuscript makes no numerical-optimizer claims, and the retired
+computations are not evidence for, and must not be cited by, the current
+paper.
 
-From the `reproducibility/` directory:
+## Submission files
 
-```
-pip install -r requirements.txt
-python kl_contraction_audit.py
-python verify_table_remark_7_6.py
-python simulate_rho_spectral_cheeger.py
-```
+The manuscript compiles from the following self-contained source set:
 
-Random seed is fixed at `20260511`. Reference environment: Python 3.12.13,
-NumPy 2.3.5.
+- main-revised-adv.tex
+- figures/singleton-retention-profiles.pdf
+- scripts/generate_retention_profile_figure.py
+- scripts/validate_retention_claims.py
+- README.md
+- requirements-reproducibility.txt
 
-- `verify_table_remark_7_6.py` regenerates the table cited in Remark 7.6;
-  outputs are written to `verify_table_remark_7_6_results.json`.
-- `simulate_rho_spectral_cheeger.py` reproduces the Spearman correlations
-  reported in §7 across the 12-family suite (n = 46 chains).
-- `kl_contraction_audit.py` is the self-contained audit referenced in the
-  Code and Data Availability statement.
+The file **refs.bib** mirrors the embedded bibliography for reuse, but the
+manuscript currently uses its internal thebibliography environment and
+therefore does not require BibTeX.
+
+## Reproduce the figure and checks
+
+Python 3.10 or later is recommended.
+
+    python -m pip install -r requirements-reproducibility.txt
+    python scripts/generate_retention_profile_figure.py
+    python scripts/validate_retention_claims.py
+
+The figure generator writes a vector PDF to
+**figures/singleton-retention-profiles.pdf**. The validator uses only the
+Python standard library and checks:
+
+- positivity, row normalization, stationarity, and detailed balance of the
+  multiplicity construction;
+- agreement of the matrix calculation with the displayed block-divergence
+  formulas;
+- the order and inequalities used in the diagonal choice of N_m and
+  delta_m;
+- the supplementary three-state spectra and profiles;
+- the symmetric binary comparison; and
+- the uniform set-bottleneck simplification.
+
+The script is a transcription check; the proofs in the manuscript remain
+the mathematical justification.
+
+## Build the manuscript
+
+Run pdfLaTeX twice from the repository root:
+
+    pdflatex -interaction=nonstopmode -halt-on-error main-revised-adv.tex
+    pdflatex -interaction=nonstopmode -halt-on-error main-revised-adv.tex
+
+No shell escape, external data, or network access is required. A clean build
+should contain no undefined references, undefined citations, missing figures,
+or overfull boxes.
+
+## Submission-package check
+
+Before submission, extract the source archive into an empty directory and
+repeat the two pdfLaTeX commands there. The data-and-code statement in the
+paper refers only to files listed above, all of which must be present in the
+archive.
